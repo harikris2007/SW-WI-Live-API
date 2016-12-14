@@ -1,0 +1,19 @@
+<video id=example-video width=960 height=540 class="video-js vjs-default-skin" controls>
+  <source
+     src="http://52.77.235.152:5080/live/pub85141120161146114.m3u8"
+     type="application/x-mpegURL">
+</video>
+ 
+
+<script src="http://speakerswire.com/wi/ver1/theme/sw/js/adapter-latest.js"></script>
+<script src="http://speakerswire.com/wi/ver1/theme/sw/js/videojs/video.min.js"></script>
+ 
+<script src="http://speakerswire.com/wi/ver1/theme/sw/js/videojs/videojs.hls.min.js"></script>
+<script src="http://speakerswire.com/wi/ver1/theme/sw/js/red5pro/red5pro-sdk.min.js"></script>
+<script src="http://speakerswire.com/wi/ver1/theme/sw/js/hls-metadata.js"></script>
+ 
+
+<script>
+var player = videojs('example-video');
+player.play();
+</script>

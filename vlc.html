@@ -1,0 +1,60 @@
+<link href="http://vjs.zencdn.net/5.11.7/video-js.css" rel="stylesheet">
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/adapter-latest.js"></script>
+<script src="js/videojs/video.min.js"></script>
+<script src="js/videojs/videojs-media-sources.min.js"></script>
+<script src="js/videojs/videojs.hls.min.js"></script>
+<script src="js/red5pro/red5pro-sdk.min.js"></script>
+<script src="js/hls-metadata.js"></script>
+<script>
+  videojs.options.flash.swf = "http://streambox.fr/HLSProvider/videojs/video-js.swf"
+</script>
+<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="360" data-setup='{"techOrder": ["flash"]}'>
+  <source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type='video/mp4'/>
+</video>
+<video class="video-js vjs-default-skin"  width="320" height="240" src="rtsp://52.77.235.152:8554/live/pub85141120161202210" type='video/mp4' controls>
+     Your browser does not support RTP streams.
+</video>
+<video class="video-js vjs-default-skin"  width="480" controls src="rtsp://52.77.235.152:8554/live/pub85141120161202210" type='video/mp4'></video>
+ 
+<OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab" width="640" height="480" id="vlc" events="True">
+   <param name="Src" value="rtsp://52.77.235.152:8554/live/pub85141120161202210" />
+   <param name="ShowDisplay" value="True" />
+   <param name="AutoLoop" value="False" />
+   <param name="AutoPlay" value="True" />
+   <embed id="vlcEmb"  type="application/x-google-vlc-plugin" version="VideoLAN.VLCPlugin.2" autoplay="yes" loop="no" width="640" height="480"
+     target="rtsp://52.77.235.152:8554/live/pub85141120161202210"></embed>
+</OBJECT>
+ 
+ 
+ 
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="Subscriber">
+                <param name="movie" value="Subscriber.swf?app=live&buffer=2&host=52.77.235.152&stream=pub82141120161243101" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#ffffff" />
+                <param name="allowScriptAccess" value="always" />
+                <param name="allowFullScreen" value="true" />
+
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="Subscriber.swf?app=live&buffer=2&host=52.77.235.152&stream=pub82141120161243101" width="100%" height="100%">
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <param name="allowScriptAccess" value="always" />
+                    <param name="allowFullScreen" value="true" />
+
+                <!--<![endif]-->
+                <!--[if gte IE 6]>-->
+                    <p>
+                        Either scripts and active content are not permitted to run or Adobe Flash Player version
+                        11.1.0 or greater is not installed.
+                    </p>
+                <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflashplayer">
+                        <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" />
+                    </a>
+                <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+
+            </object>
+  

@@ -1,0 +1,86 @@
+
+
+<!doctype html>
+
+<html>
+
+<head>
+   <meta charset="utf-8">
+
+      <title>Flowplayer version 5 · HLS support</title>
+   
+   <!-- optimize mobile versions -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+      <!-- The "minimalist" skin - choose from: "minimalist.css", "functional.css", "playful.css" -->
+   <link rel="stylesheet" href="//releases.flowplayer.org/5.5.2/skin/minimalist.css">
+      <!-- the quality selector stylesheet -->
+   <link rel="stylesheet" href="//flowplayer.org/drive/quality-selector.css">
+   
+   <!-- Minimal styling for this standalone page, can be removed -->
+   <link rel="stylesheet" href="/media/css/demo.css">
+   <!-- Syntax highlighting of source code, can be removed -->
+   <link rel="stylesheet" href="/media/css/pygments.css">
+   
+<style>
+#content {
+  max-width: 720px; /* narrower for 4/3 aspect ratio */
+}
+
+.flowplayer {
+  background-image: url(//d12zt1n3pd4xhr.cloudfront.net/img/stsp.jpg);
+}
+</style>
+
+      <!-- Flowplayer depends on jquery -->
+   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+         <!-- Flowplayer library -->
+   <script src="//releases.flowplayer.org/5.5.2/flowplayer.min.js"></script>
+      <!-- the quality selector plugin -->
+   <script src="//flowplayer.org/drive/quality-selector.js"></script>
+   
+   
+<script>
+// display information about the video type
+flowplayer(function (api) {
+  api.bind("load", function (e, api, video) {
+    $("#vtype").text(video.type);
+  });
+});
+</script>
+
+</head>
+
+<body>
+
+   <div id="content">
+
+      <h1>Flowplayer version 5 · HLS support</h1>
+
+<div class="flowplayer"
+     data-qualities="288p,480p,576p"
+     data-default-quality="480p"
+     data-rtmp="rtmp://suiq9cjky46zg.cloudfront.net/cfx/st"
+     data-ratio="0.75">
+
+   <video>
+      <source type="application/x-mpegurl" src="http://52.77.235.152:5080/live/pub85141120161146114.m3u8">
+      <source type="video/webm"            src="http://52.77.235.152:5080/live/pub85141120161146114.webm">
+      <source type="video/mp4"             src="http://52.77.235.152:5080/live/pub85141120161146114.mp4">
+      <source type="video/flash"           src="mp4:stsp">
+   </video>
+
+</div>
+
+<div class="info">
+   <p>Video type: <span id="vtype"></span></p>
+
+   <p><code>application/x-mpegurl</code> is played if the browser
+   <a href="/videotest/canplay.html">supports it</a>.</p>
+</div>
+ 
+</div>
+   </div> <!-- end content -->
+
+</body>
+</html>

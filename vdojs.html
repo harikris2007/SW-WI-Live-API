@@ -1,0 +1,29 @@
+<video id="ID1" class="video-js" controls  preload="auto" width="220" height="100">
+    <source src="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4" type='video/mp4' />
+</video>
+<p><br></p>
+<video id="ID2" class="video-js" controls preload="auto" width="220" height="100" poster="http://d2gw81m0mwbalc.cloudfront.net/thumbs/92.jpg">
+    <source src="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4" type='video/mp4' />
+</video>
+      <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
+      
+      
+      <script>
+	   $(".video-js").each(function (videoIndex) {
+
+    var videoId = $(this).attr("id");
+
+    videojs(videoId).ready(function(){
+        this.on("play", function(e) {
+            //pause other video
+            $(".video-js").each(function (index) {
+               // if (videoIndex !== index) {
+                   // this.player.pause();
+               // }
+            });
+        });
+
+    });
+});
+
+ </script>
